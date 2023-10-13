@@ -12,8 +12,9 @@
     margin-top: 25px;
 
     .card {
+      overflow: hidden;
       position: relative;
-      width: calc(33.33% - 42px);
+      width: calc((100% - 42px) / 3);
       margin-left: 21px;
 
       &:first-child {
@@ -36,12 +37,30 @@
         }
       }
 
+      &-info {
+        margin-top: 24px;
+      }
+
+      &-title {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        color: $primary2;
+      }
+
+      &-desc {
+        display: block;
+        margin: 14px 0 16px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $primary2;
+      }
+
       &.coming-soon {
         &:after {
           position: absolute;
-          top: 0;
-          right: 0;
-
+          top: 26px;
+          right: -50px;
           display: flex;
           width: 242px;
           transform: rotate(30deg);
@@ -49,10 +68,48 @@
           justify-content: center;
           align-items: center;
           gap: 8px;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 21px;
+          background: $color_fff;
+          content: 'COMING SOON';
+        }
 
-          content: '';
+        .btn-get {
+          background-color: rgba($color: $primary2, $alpha: 0.5);
         }
       }
+    }
+  }
+}
+
+.testimonials-let-chat {
+  margin-top: 90px;
+  
+  .info-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .let-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 631px;
+    height: 350px;
+    margin-left: 38px;
+    background: #9B9B9B;
+
+    .txt-tile {
+      margin-bottom: 15px;
+      font-family: 'Koulen', sans-serif;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 50px;
+      color: $primary5;
     }
   }
 }

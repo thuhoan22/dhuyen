@@ -65,7 +65,7 @@
             <ul class="list-card">
               <li class="card">
                 <a href="#none">
-                  <div class="card-img">
+                  <div class="card-img card-hover">
                     <!-- <img src="img/img-destination1.png" alt=""> -->
                   </div>
                   <div class="card-info">
@@ -77,7 +77,7 @@
               </li>
               <li class="card">
                 <a href="#none">
-                  <div class="card-img">
+                  <div class="card-img card-hover">
                     <!-- <img src="img/img-destination1.png" alt=""> -->
                   </div>
                   <div class="card-info">
@@ -89,13 +89,13 @@
               </li>
               <li class="card coming-soon">
                 <a href="#none">
-                  <div class="card-img">
+                  <div class="card-img card-hover">
                     <!-- <img src="img/img-destination1.png" alt=""> -->
                   </div>
                   <div class="card-info">
                     <span class="card-title">VIETJET AIR: BETTER BOOKING EXPERIENCE ON VJ AIR APPLICATION</span>
                     <span class="card-desc">REDESIGN; UX DESIGN; UX PSYCHOLOGY</span>
-                    <button type="button" class="btn-get">GET IN TOUCH</button>
+                    <button type="button" class="btn-get">COMING SOON</button>
                   </div>
                 </a>
               </li>
@@ -103,6 +103,32 @@
           </div>
         </section>
         <!-- END Project -->
+
+        <!-- Testimonials -->
+        <div class="testimonials-let-chat">
+          <div class="inner">
+            <div class="info-content">
+              <!-- Swiper -->
+              <div class="testimonials swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 1</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+              <div class="let-chat">
+                <strong class="txt-tile">GOT A PROJECT? <br>LET'S CHAT</strong>
+                <button type="button" class="btn-get">GET IN TOUCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Testimonials -->
       </div>
       <!-- END CONTENT -->
     </main>
@@ -134,6 +160,49 @@
       </div>
 		</footer>
 		<!-- END FOOTER -->
+
+    <!-- Cursor -->
+    <div class="cursor-custom"></div>
   </div>
+
+  <script>
+    let itemCursor = document.querySelector('.cursor-custom');
+
+    document.addEventListener('mousemove', moveCursor);
+
+    function moveCursor(e) {
+      let x = e.clientX;
+      let y = e.clientY;
+      
+      itemCursor.style.left = `${x}px`;
+      itemCursor.style.top = `${y}px`;
+    }
+
+    let links = Array.from(document.querySelectorAll('a'));
+
+    links.forEach((link) => {
+      itemCursor.classList.remove('view-project');
+
+      link.addEventListener('mouseover', () => {
+        itemCursor.classList.add('grow');
+      });
+      link.addEventListener('mouseleave', () => {
+        itemCursor.classList.remove('grow');
+      });
+    })
+
+    let projects = Array.from(document.querySelectorAll('.card-hover'));
+
+    projects.forEach((project) => {
+      itemCursor.classList.remove('grow');
+
+      project.addEventListener('mouseover', () => {
+        itemCursor.classList.add('view-project');
+      });
+      project.addEventListener('mouseleave', () => {
+        itemCursor.classList.remove('view-project');
+      });
+    })
+  </script>
 </body>
 </html>
