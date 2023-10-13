@@ -1,0 +1,72 @@
+.spot {
+  &-content {
+    padding: 142px 67px 56px 108px;
+    background: url(../../images/img-spot.png) no-repeat center right;
+    background-size: 672px 468px;
+
+    .txt-sub {
+      font-size: 14px;
+      font-weight: 700;
+      color: $primary;
+      line-height: 18px;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-size: 92px;
+      font-weight: 400;
+      font-family: 'Koulen', sans-serif;
+      color: $primary;
+      line-height: 85px;
+    }
+
+    .btn-get {
+      margin-top: 36px;
+    }
+  }
+}
+
+.divider {
+  max-width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  margin-bottom: 60px;
+
+  &-link {
+    // overflow-x: scroll;
+    width: 100%;
+    min-height: 61px;
+    max-height: 61px;
+    border-top: 1px solid $primary2;
+    border-bottom: 1px solid $primary2;
+    background-color: $primary6;
+
+    &.rotate-left {
+      transform: rotate(-1.046deg);
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    padding: 20px 8px;
+
+    &>li {
+      font-size: 16px;
+      font-weight: 700;
+      color: $primary;
+      line-height: 21px;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      &:not(:first-of-type) {
+        margin-left: 97px;
+      }
+    }
+  }
+}
+
+
+
+
+

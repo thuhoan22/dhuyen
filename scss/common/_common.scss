@@ -1,0 +1,152 @@
+* {
+	font-family: 'Roboto Mono', 'Koulen', Arial, sans-serif, Hevetica;
+	box-sizing: border-box;
+}
+
+.inner {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+// Header
+header {
+	border-bottom: 2px solid $primary;
+
+	.header-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 22px 0 14px;
+	}
+
+	.list-menu {
+		display: flex;
+		align-items: center;
+
+		&>li {
+			&:not(:first-of-type) {
+				margin-left: 50px;
+			}
+		}
+
+		.item-menu {
+			padding: 8px;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 18px;
+			color: $primary;
+			text-transform: uppercase;
+
+			&.item-getin {
+				padding: 8px 12px;
+				background-color: $primary2;
+				color: $primary5;
+			}
+		}
+	}
+}
+
+// Footer
+footer {
+	background-color: $primary2;
+
+	.footer {
+		&-content {
+			padding: 55px 0 81px;
+	
+			.txt-contact {
+				display: block;
+				margin-top: 29px;
+				padding-top: 29px;
+				border-top: 1px solid rgba($color: $primary5, $alpha: 0.3);
+				font-size: 12px;
+				font-weight: 700;
+				font-style: italic;
+				color: $primary5;
+				line-height: 16px;
+				text-align: right;
+			}
+		}
+
+		&-info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.list {
+				&-menu {
+					display: flex;
+					align-items: center;
+
+					&>li {
+						&:not(:first-of-type) {
+							margin-left: 40px;
+						}
+					}
+
+					.item-menu {
+						font-size: 14px;
+						font-weight: 700;
+						line-height: 18px;
+						text-transform: uppercase;
+					}
+
+					.item-getin {
+						padding: 7px 11px;
+						border: 1px solid $primary5;
+					}
+				}
+
+				&-sns {
+					display: flex;
+					align-items: center;
+
+					li {
+						&:not(:first-of-type) {
+							margin-left: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	a {
+		color: $primary5;
+	}
+}
+
+.btn-get {
+	display: inline-block;
+	padding: 8px 12px;
+	background-color: $primary2;
+	font-size: 14px;
+	font-weight: 700;
+	color: $primary5;
+	line-height: 18px;
+}
+
+// keyframes
+@keyframes scrollTextStart {
+  from {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes scrollTextEnd {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
