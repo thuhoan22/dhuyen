@@ -133,6 +133,9 @@ header .list-menu .item-menu.item-getin {
     padding: 6px 8px;
   }
 }
+header .list-menu .item-menu.is-active {
+  border-bottom: 1px solid #000;
+}
 header .btn-mobile {
   display: none;
   position: absolute;
@@ -1266,26 +1269,37 @@ button.swiper-pagination-bullet {
     transform: translateX(0);
   }
 }
+.project {
+  margin-top: 60px;
+}
 .project .title {
-  margin-top: 25px;
+  display: block;
+  margin: 25px 0;
   font-size: 24px;
   font-weight: 700;
 }
 .project .list-card {
   display: flex;
   align-items: center;
-  margin-top: 25px;
+  flex-wrap: wrap;
+  margin: -25px -11px;
 }
 @media screen and (max-width: 768px) {
   .project .list-card {
     flex-direction: column;
+    margin: 0;
   }
 }
 .project .list-card .card {
   overflow: hidden;
   position: relative;
-  width: calc((100% - 42px) / 3);
-  margin-left: 21px;
+  width: calc(33.33% - 22px);
+  margin: 25px 11px;
+}
+@media screen and (max-width: 1024px) {
+  .project .list-card .card {
+    width: calc(50% - 22px);
+  }
 }
 @media screen and (max-width: 768px) {
   .project .list-card .card {
@@ -1293,8 +1307,10 @@ button.swiper-pagination-bullet {
     margin: 60px 0 0;
   }
 }
-.project .list-card .card:first-child {
-  margin-left: 0;
+@media screen and (max-width: 768px) {
+  .project .list-card .card:first-child {
+    margin-top: 0;
+  }
 }
 .project .list-card .card-img {
   position: relative;
@@ -1364,7 +1380,7 @@ button.swiper-pagination-bullet {
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .testimonials-let-chat .info-content {
     flex-direction: column;
   }
@@ -1381,7 +1397,7 @@ button.swiper-pagination-bullet {
     width: calc(100% - 522px);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .testimonials-let-chat .info-content .testimonials-wrap {
     width: 100%;
   }
@@ -1491,7 +1507,7 @@ button.swiper-pagination-bullet {
     width: 522px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .testimonials-let-chat .let-chat {
     width: 100%;
     margin: 60px 0 0;
@@ -1510,4 +1526,39 @@ button.swiper-pagination-bullet {
     font-size: 45px;
     line-height: 45px;
   }
+}
+
+.about {
+  margin-top: 122px;
+}
+.about .info-content {
+  display: flex;
+  align-items: center;
+}
+.about .info-content .img-box {
+  width: 590px;
+  height: 538px;
+  margin-right: 60px;
+  background-color: #9B9B9B;
+}
+.about .info-content .info-box {
+  width: calc(100% - 650px);
+}
+.about .info-content .info-box .txt-title {
+  display: block;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Koulen", sans-serif;
+  font-size: 92px;
+  font-weight: 400;
+  line-height: 85px;
+}
+.about .info-content .info-box .txt-detail {
+  display: block;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.675px;
 }/*# sourceMappingURL=dhuyen.css.map */

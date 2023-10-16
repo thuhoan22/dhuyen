@@ -1,0 +1,39 @@
+.about {
+  margin-top: 122px;
+
+  .info-content {
+    display: flex;
+    align-items: center;
+
+    .img-box {
+      width: 590px;
+      height: 538px;
+      margin-right: 60px;
+      background-color: #9B9B9B;
+    }
+
+    .info-box {
+      width: calc(100% - 650px);
+
+      .txt-title {
+        display: block;
+        margin-bottom: 20px;
+        color: $primary;
+        font-family: 'Koulen', sans-serif;
+        font-size: 92px;
+        font-weight: 400;
+        line-height: 85px;
+      }
+
+      .txt-detail {
+        display: block;
+        margin-bottom: 20px;
+        color: $primary;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0.675px;
+      }
+    }
+  }
+}

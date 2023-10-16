@@ -79,6 +79,10 @@ header {
 					padding: 6px 8px;
 				}
 			}
+
+			&.is-active {
+				border-bottom: 1px solid $primary;
+			}
 		}
 	}
 

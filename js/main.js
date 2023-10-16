@@ -75,6 +75,7 @@ function mobileGnbOpen() {
 document.addEventListener('DOMContentLoaded', function () {
 	swiperTestimonials();
 	mobileGnbOpen();
+	mouseHover();
 });
 
-window.addEventListener('resize', mouseHover);
+// window.addEventListener('resize', mouseHover);
