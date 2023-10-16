@@ -3,7 +3,6 @@
     margin-top: 25px;
     font-size: 24px;
     font-weight: 700;
-    line-height: 32px;
   }
 
   .list-card {
@@ -11,11 +10,20 @@
     align-items: center;
     margin-top: 25px;
 
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+
     .card {
       overflow: hidden;
       position: relative;
       width: calc((100% - 42px) / 3);
       margin-left: 21px;
+
+      @media #{$mobile} {
+        width: 100%;
+        margin: 60px 0 0;
+      }
 
       &:first-child {
         margin-left: 0;
@@ -26,6 +34,10 @@
         width: 100%;
         padding-bottom: 114.3%;
         background: url(../../images/img-updating.jpg) no-repeat center/cover;
+
+        @media #{$mobile} {
+          padding-bottom: 82.02%;
+        }
 
         img {
           display: block;
@@ -46,11 +58,15 @@
         font-size: 20px;
         font-weight: 700;
         color: $primary2;
+
+        @media #{$inner} {
+          font-size: 18px;
+        }
       }
 
       &-desc {
         display: block;
-        margin: 14px 0 16px;
+        margin: 8px 0 16px;
         font-size: 14px;
         font-weight: 700;
         color: $primary2;
@@ -58,20 +74,19 @@
 
       &.coming-soon {
         &:after {
-          position: absolute;
-          top: 26px;
-          right: -50px;
           display: flex;
-          width: 242px;
-          transform: rotate(30deg);
-          padding: 8px;
-          justify-content: center;
           align-items: center;
-          gap: 8px;
+          justify-content: center;
+          position: absolute;
+          top: 22px;
+          right: -54px;
+          width: 242px;
+          padding: 8px;
+          background: $color_fff;
           font-size: 16px;
           font-weight: 700;
-          line-height: 21px;
-          background: $color_fff;
+          transform: rotate(30deg);
+          gap: 8px;
           content: 'COMING SOON';
         }
 
@@ -84,12 +99,140 @@
 }
 
 .testimonials-let-chat {
-  margin-top: 90px;
+  margin: 90px 0 81px;
   
   .info-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+    
+    .testimonials {
+      position: static;
+
+      &-wrap {
+        position: relative;
+        width: calc(100% - 669px);
+
+        @media #{$inner} {
+          width: calc(100% - 522px);
+        }
+
+        @media #{$mobile} {
+          width: 100%;
+        }
+      }
+    }
+
+    .swiper {
+      &-slide {
+        padding: 52px 60px 67px;
+        border: 1px solid $primary;
+
+        @media #{$inner} {
+          padding: 40px 45px 50px;
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      &-desc {
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $primary;
+        letter-spacing: 0.675px;
+
+        @media #{$mobile} {
+          font-size: 12px;
+        }
+      }
+
+      &-person {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+
+        .avt {
+          min-width: 60px;
+          min-height: 60px;
+          border-radius: 50%;
+          background-color: #9B9B9B;
+
+          @media #{$mobile} {
+            min-width: 50px;
+            min-height: 50px;
+          }
+        }
+
+        .name {
+          display: block;
+          font-size: 15px;
+          font-weight: 700;
+
+          @media #{$mobile} {
+            font-size: 12px;
+          }
+        }
+
+        .position {
+          margin-top: 8px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        
+        .info {
+          margin-left: 16px;
+          color: $primary;
+        }
+      }
+    }
+
+    .swiper-navigation {
+      .swiper-button {
+        &-next {
+          right: -18px;
+          width: auto;
+          height: auto;
+          margin-top: -17px;
+  
+          &:after {
+            min-width: 36px;
+            min-height: 36px;
+            background: url(../../images/ic-arrow-right.svg) no-repeat;
+            content: '';
+          }
+        }
+  
+        &-prev {
+          left: -18px;
+          width: auto;
+          height: auto;
+          margin-top: -17px;
+  
+          &:after {
+            min-width: 36px;
+            min-height: 36px;
+            background: url(../../images/ic-arrow-left.svg) no-repeat;
+            content: '';
+          }
+        }
+
+        &-next,
+        &-prev {
+          &.swiper-button-disabled {
+            opacity: 1;
+            pointer-events: initial;
+          }
+        }
+      }
+    }
   }
 
   .let-chat {
@@ -97,24 +240,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     width: 631px;
     height: 350px;
     margin-left: 38px;
     background: #9B9B9B;
+    text-align: center;
+
+    @media #{$inner} {
+      width: 522px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin: 60px 0 0;
+    }
 
     .txt-tile {
       margin-bottom: 15px;
-      font-family: 'Koulen', sans-serif;
       font-size: 50px;
       font-weight: 400;
-      line-height: 50px;
+      font-family: 'Koulen', sans-serif;
       color: $primary5;
+      line-height: 50px;
+
+      @media #{$inner} {
+        font-size: 45px;
+        line-height: 45px;
+      }
     }
   }
 }
-
-
-
-
-
