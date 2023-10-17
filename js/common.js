@@ -72,7 +72,6 @@
 			});
 
 			var mouseCard = $('.card-hover');
-			console.log(mouseCard);
 			mouseCard.each(function() {
 				$item_cusor.removeClass('grow');
 

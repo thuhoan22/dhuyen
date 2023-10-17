@@ -44,7 +44,7 @@
         position: relative;
         width: 100%;
         padding-bottom: 114.5%;
-        background: url(../../images/img-updating.jpg) no-repeat center/cover;
+        background: url(../images/img-updating.jpg) no-repeat center/cover;
 
         @media #{$mobile} {
           padding-bottom: 82.02%;
@@ -245,7 +245,7 @@
         &:after {
           min-width: 36px;
           min-height: 36px;
-          background: url(../../images/ic-arrow-right.svg) no-repeat;
+          background: url(../images/ic-arrow-right.svg) no-repeat;
           content: '';
         }
       }
@@ -259,7 +259,7 @@
         &:after {
           min-width: 36px;
           min-height: 36px;
-          background: url(../../images/ic-arrow-left.svg) no-repeat;
+          background: url(../images/ic-arrow-left.svg) no-repeat;
           content: '';
         }
       }

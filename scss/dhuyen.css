@@ -360,7 +360,7 @@ footer a {
 .cursor-custom.view-project {
   width: 105px;
   height: 105px;
-  background: url(../../images/img-hover.png) no-repeat;
+  background: url(../images/img-hover.png) no-repeat;
   mix-blend-mode: normal;
 }
 
@@ -368,21 +368,21 @@ footer a {
 @font-face {
   font-weight: 500;
   font-family: "Roboto Mono";
-  src: url("../../font/RobotoMono-Medium.eot");
-  src: url("../../font/RobotoMono-Medium.eot?#iefix") format("embedded-opentype"), url("../../font/RobotoMono-Medium.woff2") format("woff2"), url("../../font/RobotoMono-Medium.woff") format("woff"), url("../../font/RobotoMono-Medium.ttf") format("truetype");
+  src: url("../font/RobotoMono-Medium.eot");
+  src: url("../font/RobotoMono-Medium.eot?#iefix") format("embedded-opentype"), url("../font/RobotoMono-Medium.woff2") format("woff2"), url("../font/RobotoMono-Medium.woff") format("woff"), url("../font/RobotoMono-Medium.ttf") format("truetype");
 }
 @font-face {
   font-weight: 700;
   font-family: "Roboto Mono";
-  src: url("../../font/RobotoMono-Bold.eot");
-  src: url("../../font/RobotoMono-Bold.eot?#iefix") format("embedded-opentype"), url("../../font/RobotoMono-Bold.woff2") format("woff2"), url("../../font/RobotoMono-Bold.woff") format("woff"), url("../../font/RobotoMono-Bold.ttf") format("truetype");
+  src: url("../font/RobotoMono-Bold.eot");
+  src: url("../font/RobotoMono-Bold.eot?#iefix") format("embedded-opentype"), url("../font/RobotoMono-Bold.woff2") format("woff2"), url("../font/RobotoMono-Bold.woff") format("woff"), url("../font/RobotoMono-Bold.ttf") format("truetype");
 }
 /* Koulen */
 @font-face {
   font-weight: 400;
   font-family: "Koulen";
-  src: url("../../font/Koulen-Regular.eot");
-  src: url("../../font/Koulen-Regular.eot?#iefix") format("embedded-opentype"), url("../../font/Koulen-Regular.woff2") format("woff2"), url("../../font/Koulen-Regular.woff") format("woff"), url("../../font/Koulen-Regular.ttf") format("truetype");
+  src: url("../font/Koulen-Regular.eot");
+  src: url("../font/Koulen-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Koulen-Regular.woff2") format("woff2"), url("../font/Koulen-Regular.woff") format("woff"), url("../font/Koulen-Regular.ttf") format("truetype");
 }
 /**
  * Swiper 10.3.1
@@ -1170,7 +1170,7 @@ button.swiper-pagination-bullet {
   z-index: -1;
   width: 672px;
   height: 468px;
-  background: url(../../images/img-spot.png) no-repeat;
+  background: url(../images/img-spot.png) no-repeat;
   background-size: 100% auto;
   content: "";
 }
@@ -1320,7 +1320,7 @@ button.swiper-pagination-bullet {
   position: relative;
   width: 100%;
   padding-bottom: 114.5%;
-  background: url(../../images/img-updating.jpg) no-repeat center/cover;
+  background: url(../images/img-updating.jpg) no-repeat center/cover;
 }
 @media screen and (max-width: 768px) {
   .project .list-card .card-img {
@@ -1503,7 +1503,7 @@ button.swiper-pagination-bullet {
 .testimonials .swiper-navigation .swiper-button-next:after {
   min-width: 36px;
   min-height: 36px;
-  background: url(../../images/ic-arrow-right.svg) no-repeat;
+  background: url(../images/ic-arrow-right.svg) no-repeat;
   content: "";
 }
 .testimonials .swiper-navigation .swiper-button-prev {
@@ -1515,7 +1515,7 @@ button.swiper-pagination-bullet {
 .testimonials .swiper-navigation .swiper-button-prev:after {
   min-width: 36px;
   min-height: 36px;
-  background: url(../../images/ic-arrow-left.svg) no-repeat;
+  background: url(../images/ic-arrow-left.svg) no-repeat;
   content: "";
 }
 .testimonials .swiper-navigation .swiper-button-next.swiper-button-disabled, .testimonials .swiper-navigation .swiper-button-prev.swiper-button-disabled {
@@ -1613,7 +1613,7 @@ button.swiper-pagination-bullet {
   font-size: 0;
   width: 105px;
   height: 105px;
-  background: url(../../images/ic-let-chat.png) no-repeat;
+  background: url(../images/ic-let-chat.png) no-repeat;
   background-size: 100% auto;
 }
 @media screen and (max-width: 1280px) {
@@ -1874,7 +1874,7 @@ button.swiper-pagination-bullet {
   left: 0;
   width: 24px;
   height: 24px;
-  background: url(../../images/ic-hexagon.svg) no-repeat;
+  background: url(../images/ic-hexagon.svg) no-repeat;
   background-size: 100%;
   content: "";
 }
@@ -2194,7 +2194,7 @@ button.swiper-pagination-bullet {
   right: 14px;
   width: 24px;
   height: 24px;
-  background: url(../../images/ic-arrow-down.svg) no-repeat;
+  background: url(../images/ic-arrow-down.svg) no-repeat;
   background-size: 100%;
   transition: 0.2s;
   content: "";
