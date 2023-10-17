@@ -13,7 +13,7 @@
 	}
 
 	@media #{$mobile} {
-		padding: 0 40px;
+		padding: 0 25px;
 	}
 }
 
@@ -90,7 +90,7 @@ header {
 		display: none;
     position: absolute;
     top: 19px;
-    left: 32px;
+    left: 17px;
     width: 40px;
     height: 40px;
 
@@ -206,6 +206,10 @@ header {
 			.item-menu {
 				font-size: 22px;
 				color: $primary2;
+	
+				&.is-active {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -256,12 +260,16 @@ footer {
 						justify-content: space-between;
 						order: 3;
 						width: 100%;
-						margin: 40px 0 0;
+						margin: 30px 0 0;
 					}
 
 					&>li {
 						&:not(:first-of-type) {
 							margin-left: 40px;
+
+							@media #{$tablet} {
+								margin-left: 25px;
+							}
 						}
 					}
 
@@ -269,11 +277,23 @@ footer {
 						font-size: 14px;
 						font-weight: 700;
 						text-transform: uppercase;
+
+						@media #{$tablet} {
+							font-size: 12px;
+						}
+
+						@media #{$mobile} {
+							font-size: 11px;
+						}
 					}
 
 					.item-getin {
 						padding: 7px 11px;
 						border: 1px solid $primary5;
+
+						@media #{$tablet} {
+							padding: 6px 10px;
+						}
 					}
 				}
 
@@ -289,6 +309,10 @@ footer {
 					li {
 						&:not(:first-of-type) {
 							margin-left: 30px;
+
+							@media #{$tablet} {
+								margin-left: 20px;
+							}
 						}
 					}
 				}
