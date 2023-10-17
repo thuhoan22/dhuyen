@@ -24,6 +24,7 @@
     }
 
     .txt-sub {
+      display: block;
       font-size: 14px;
       font-weight: 700;
       color: $primary;
@@ -97,7 +98,7 @@
     background-color: $primary6;
 
     &.rotate-left {
-      transform: rotate(-1.046deg);
+      transform: rotate(-1.05deg);
 
       @media #{$mobile} {
         transform: rotate(0);
@@ -107,7 +108,7 @@
     &.rotate-right {
       min-height: 91px;
       max-height: 91px;
-      transform: rotate(0.935deg);
+      transform: rotate(0.8deg);
 
       @media #{$mobile} {
         transform: rotate(0);
@@ -125,15 +126,12 @@
     padding: 20px 8px;
 
     &>li {
+      margin-left: 97px;
       font-size: 16px;
       font-weight: 700;
       color: $primary;
       text-transform: uppercase;
       white-space: nowrap;
-
-      &:not(:first-of-type) {
-        margin-left: 97px;
-      }
     }
 
     &:first-child {

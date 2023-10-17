@@ -72,10 +72,37 @@ function mobileGnbOpen() {
 	});
 };
 
+// Accordion tem
+function accordionItem() {
+	var accordionQuestions = document.querySelectorAll('.accordion .accordion-question');
+
+	accordionQuestions.forEach((accordionQuestion) => {
+		var height = accordionQuestion.closest('.accordion-item').querySelector('.accordion-body').offsetHeight;
+		accordionQuestion.closest('.accordion-item').querySelector('.accordion-body').style.height = '0px';
+
+		accordionQuestion.addEventListener('click', () => {
+			var accordionQuestionsActive = document.querySelector('.accordion-item.is-active');
+			if(accordionQuestionsActive) {
+				accordionQuestionsActive.classList.remove('is-active');
+				accordionQuestionsActive.querySelector('.accordion-body').style.height = '0px';
+			}
+
+			if (accordionQuestion.closest('.accordion-item').classList.contains('is-active')) {
+				accordionQuestion.closest('.accordion-item').classList.remove('is-active');
+				accordionQuestion.closest('.accordion-item').querySelector('.accordion-body').style.height = '0px';
+			} else {
+				accordionQuestion.closest('.accordion-item').classList.add('is-active');
+				accordionQuestion.closest('.accordion-item').querySelector('.accordion-body').style.height = height + 'px';
+			}
+		});
+	});
+};
+
 document.addEventListener('DOMContentLoaded', function () {
 	swiperTestimonials();
 	mobileGnbOpen();
 	mouseHover();
+	accordionItem();
 });
 
 // window.addEventListener('resize', mouseHover);

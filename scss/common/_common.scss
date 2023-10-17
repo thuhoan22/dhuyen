@@ -18,7 +18,7 @@
 }
 
 .content {
-	padding-bottom: 42px;
+	padding-bottom: 62px;
 }
 
 // Header
@@ -315,6 +315,12 @@ footer {
 	font-size: 14px;
 	font-weight: 700;
 	color: $primary5;
+
+	&.btn-outline {
+		padding: 7px 11px;
+		border: 1px solid $primary5;
+		background-color: transparent;
+	}
 }
 
 .cursor-custom {

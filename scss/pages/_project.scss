@@ -10,8 +10,8 @@
 
   .list-card {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     margin: -25px -11px;
 
     @media #{$mobile} {
@@ -43,7 +43,7 @@
       &-img {
         position: relative;
         width: 100%;
-        padding-bottom: 114.3%;
+        padding-bottom: 114.5%;
         background: url(../../images/img-updating.jpg) no-repeat center/cover;
 
         @media #{$mobile} {
@@ -51,12 +51,13 @@
         }
 
         img {
-          display: block;
+          display: inline-block;
           position: absolute;
-          top: 50%;
-          left: 50%;
+          top: 0;
+          left: 0;
           width: 100%;
-          transform: translate(-50%, -50%);
+          height: 100%;
+          object-fit: cover;
         }
       }
 
@@ -122,14 +123,11 @@
     }
     
     .testimonials {
-      position: static;
-
       &-wrap {
-        position: relative;
         width: calc(100% - 669px);
 
         @media #{$inner} {
-          width: calc(100% - 522px);
+          width: calc(100% - 560px);
         }
 
         @media #{$tablet} {
@@ -137,136 +135,180 @@
         }
       }
     }
+  }
 
-    .swiper {
-      &-slide {
-        padding: 52px 60px 67px;
-        border: 1px solid $primary;
+  .let-chat {
+    width: 631px;
+    margin-left: 38px;
 
-        @media #{$inner} {
-          padding: 40px 45px 50px;
+    @media #{$inner} {
+      width: 522px;
+    }
+    
+    @media #{$tablet} {
+      width: 100%;
+      margin: 60px 0 0;
+    }
+  }
+}
+
+.testimonials {
+  position: static;
+
+  &-wrap {
+    position: relative;
+  }
+
+  .swiper {
+    &-slide {
+      padding: 52px 60px 67px;
+      border: 1px solid $primary;
+
+      @media #{$inner} {
+        padding: 40px 45px 50px;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &-desc {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: $primary;
+      letter-spacing: 0.675px;
+
+      @media #{$mobile} {
+        font-size: 12px;
+      }
+    }
+
+    &-person {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+
+      .avt {
+        width: 60px;
+        min-width: 60px;
+        min-height: 60px;
+        border-radius: 50%;
+        background-color: $color_9B9;
+
+        @media #{$mobile} {
+          width: 50px;
+          min-width: 50px;
+          min-height: 50px;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 50%;
         }
       }
 
-      &-title {
-        font-size: 20px;
-        font-weight: 700;
-      }
-
-      &-desc {
-        margin-top: 20px;
+      .name {
+        display: block;
         font-size: 15px;
-        font-weight: 500;
-        color: $primary;
-        letter-spacing: 0.675px;
+        font-weight: 700;
 
         @media #{$mobile} {
           font-size: 12px;
         }
       }
 
-      &-person {
-        display: flex;
-        align-items: center;
-        margin-top: 40px;
-
-        .avt {
-          min-width: 60px;
-          min-height: 60px;
-          border-radius: 50%;
-          background-color: #9B9B9B;
-
-          @media #{$mobile} {
-            min-width: 50px;
-            min-height: 50px;
-          }
-        }
-
-        .name {
-          display: block;
-          font-size: 15px;
-          font-weight: 700;
-
-          @media #{$mobile} {
-            font-size: 12px;
-          }
-        }
-
-        .position {
-          margin-top: 8px;
-          font-size: 12px;
-          font-weight: 500;
-        }
-        
-        .info {
-          margin-left: 16px;
-          color: $primary;
-        }
+      .position {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 500;
       }
-    }
-
-    .swiper-navigation {
-      .swiper-button {
-        &-next {
-          right: -18px;
-          width: auto;
-          height: auto;
-          margin-top: -17px;
-  
-          &:after {
-            min-width: 36px;
-            min-height: 36px;
-            background: url(../../images/ic-arrow-right.svg) no-repeat;
-            content: '';
-          }
-        }
-  
-        &-prev {
-          left: -18px;
-          width: auto;
-          height: auto;
-          margin-top: -17px;
-  
-          &:after {
-            min-width: 36px;
-            min-height: 36px;
-            background: url(../../images/ic-arrow-left.svg) no-repeat;
-            content: '';
-          }
-        }
-
-        &-next,
-        &-prev {
-          &.swiper-button-disabled {
-            opacity: 1;
-            pointer-events: initial;
-          }
-        }
+      
+      .info {
+        margin-left: 16px;
+        color: $primary;
       }
     }
   }
 
-  .let-chat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 631px;
-    height: 350px;
-    margin-left: 38px;
-    background: #9B9B9B;
-    text-align: center;
+  .swiper-navigation {
+    .swiper-button {
+      &-next {
+        right: -18px;
+        width: auto;
+        height: auto;
+        margin-top: -17px;
+
+        &:after {
+          min-width: 36px;
+          min-height: 36px;
+          background: url(../../images/ic-arrow-right.svg) no-repeat;
+          content: '';
+        }
+      }
+
+      &-prev {
+        left: -18px;
+        width: auto;
+        height: auto;
+        margin-top: -17px;
+
+        &:after {
+          min-width: 36px;
+          min-height: 36px;
+          background: url(../../images/ic-arrow-left.svg) no-repeat;
+          content: '';
+        }
+      }
+
+      &-next,
+      &-prev {
+        &.swiper-button-disabled {
+          opacity: 1;
+          pointer-events: initial;
+        }
+      }
+    }
+  }
+}
+
+.let-chat {
+  position: relative;
+
+  .img-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 55.47%;
+    background: $color_9B9;
 
     @media #{$inner} {
-      width: 522px;
+      padding-bottom: 67.05%;
     }
 
-    @media #{$tablet} {
+    img {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      margin: 60px 0 0;
+      height: 100%;
+      object-fit: cover;
     }
+  }
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 
     .txt-tile {
+      display: block;
       margin-bottom: 15px;
       font-size: 50px;
       font-weight: 400;

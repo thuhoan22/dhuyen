@@ -1,5 +1,0 @@
-@function asset-image($name) {
-  $base: '../images/';
-  @return asset($base,$name);
-}
-  
