@@ -29,7 +29,7 @@ header {
 	left: 0;
 	z-index: 99;
 	border-bottom: 2px solid $primary;
-	background-color: $primary5;
+	background-color: $primary4;
 
 	.header-content {
 		display: flex;
@@ -60,6 +60,7 @@ header {
 		}
 
 		.item-menu {
+			position: relative;
 			padding: 8px;
 			font-size: 14px;
 			font-weight: 700;
@@ -70,18 +71,32 @@ header {
 				font-size: 13px;
 			}
 
+			&:after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 1px;
+				background-color: $primary;
+				transition: width 0.2s ease-in-out;
+				content: '';
+			}
+
+			&:hover,
+			&.is-active {
+				&:after {
+					width: 100%;
+				}
+			}
+
 			&.item-getin {
 				padding: 8px 12px;
 				background-color: $primary2;
-				color: $primary5;
+				color: $primary4;
 
 				@media #{$tablet} {
 					padding: 6px 8px;
 				}
-			}
-
-			&.is-active {
-				border-bottom: 1px solid $primary;
 			}
 		}
 	}
@@ -232,11 +247,11 @@ footer {
 				display: block;
 				margin-top: 34px;
 				padding-top: 29px;
-				border-top: 1px solid rgba($color: $primary5, $alpha: 0.3);
+				border-top: 1px solid rgba($color: $primary4, $alpha: 0.3);
 				font-size: 12px;
 				font-weight: 700;
 				font-style: italic;
-				color: $primary5;
+				color: $primary4;
 				text-align: right;
 			}
 		}
@@ -289,7 +304,7 @@ footer {
 
 					.item-getin {
 						padding: 7px 11px;
-						border: 1px solid $primary5;
+						border: 1px solid $primary4;
 
 						@media #{$tablet} {
 							padding: 6px 10px;
@@ -327,7 +342,7 @@ footer {
 	}
 
 	a {
-		color: $primary5;
+		color: $primary4;
 	}
 }
 
@@ -335,14 +350,22 @@ footer {
 	display: inline-block;
 	padding: 8px 12px;
 	border: 0;
+	border: 1px solid transparent;
 	background-color: $primary2;
 	font-size: 14px;
 	font-weight: 700;
-	color: $primary5;
+	color: $primary4;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		border-color: $primary2;
+		transform: translate3d(6%, 1.2%, 0px);
+		background-color: $color_fff;
+		color: $primary2;
+	}
 
 	&.btn-outline {
-		padding: 7px 11px;
-		border: 1px solid $primary5;
+		border-color: $primary4;
 		background-color: transparent;
 	}
 }

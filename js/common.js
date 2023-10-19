@@ -84,6 +84,32 @@
 			});
 		};
 
+		// Open tree content
+		var openTreeContent = function() {
+			var $tree = $('.btn-tree');
+
+			$tree.on('click', function() {
+				$(this).parents('.tree-content').toggleClass('is-open');
+				$(this).parents('.tree-content').find('.detail-tree').slideToggle();
+			});
+		};
+
+		// Open expand detail
+		var openExpandDetail = function() {
+			var $itemExpand = $('.detail-box .btn-expand');
+
+			var expandOn = $('.detail-box').hasClass('is-open');
+
+			if (expandOn) {
+				$('.detail-box.is-open').children('.info-expand').css('display','block');
+			}
+
+			$itemExpand.on('click', function() {
+				$(this).parents('.detail-box').toggleClass('is-open');
+				$(this).parents('.detail-box').find('.info-expand').slideToggle();
+			});
+		}
+
 	$(window).on('scroll', function(){
 	});
 
@@ -92,5 +118,7 @@
 		mobileNavOpen();
 		accordionItem();
 		mouseHover();
+		openTreeContent();
+		openExpandDetail();
 	});
 })(window, window.jQuery);

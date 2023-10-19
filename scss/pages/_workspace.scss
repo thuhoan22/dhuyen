@@ -89,7 +89,7 @@
   
       .img-box {
         width: 32.3%;
-        background-color: $color_9B9;
+        background-color: $primary3;
 
         @media #{$tablet} {
           width: 100%;
@@ -208,7 +208,7 @@
       .info-content {
         display: flex;
         background-color: $primary2;
-        color: $primary5;
+        color: $primary4;
 
         @media #{$tablet} {
           flex-direction: column;
@@ -285,7 +285,7 @@
           margin-top: 46px;
           font-size: 15px;
           font-weight: 500;
-          color: $primary5;
+          color: $primary4;
           letter-spacing: 0.675px;
           line-height: 27px;
           text-decoration-line: underline;
@@ -301,6 +301,10 @@
           display: flex;
           margin-top: 36px;
 
+          &:hover {
+            color: $color_fff;
+          }
+
           @media #{$mobile} {
             margin-top: 25px;
           }
@@ -309,7 +313,7 @@
 
       .img-box {
         width: 41.8%;
-        background-color: $color_9B9;
+        background-color: $primary3;
 
         @media #{$tablet} {
           width: 100%;
